@@ -1,0 +1,154 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{80F654B1-5B81-4E5B-88F3-3598200F1F44}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>frmTeamReg</RootNamespace>
+    <AssemblyName>frmTeamReg</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Oracle.ManagedDataAccess, Version=4.122.1.0, Culture=neutral, PublicKeyToken=89b483f429c47342, processorArchitecture=MSIL">
+      <HintPath>..\packages\Oracle.ManagedDataAccess.12.2.1100\lib\net40\Oracle.ManagedDataAccess.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Oracle.ManagedDataAccess.EntityFramework, Version=6.122.1.0, Culture=neutral, PublicKeyToken=89b483f429c47342, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DBConnect.cs" />
+    <Compile Include="Fixtures.cs" />
+    <Compile Include="frmEnterResult.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEnterResult.Designer.cs">
+      <DependentUpon>frmEnterResult.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmGenerateFixtures.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGenerateFixtures.Designer.cs">
+      <DependentUpon>frmGenerateFixtures.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmGenTeamProfile.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGenTeamProfile.Designer.cs">
+      <DependentUpon>frmGenTeamProfile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMainMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMainMenu.Designer.cs">
+      <DependentUpon>frmMainMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmRelTeam.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRelTeam.Designer.cs">
+      <DependentUpon>frmRelTeam.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmScheduleFixtures.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmScheduleFixtures.Designer.cs">
+      <DependentUpon>frmScheduleFixtures.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmTeamReg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTeamReg.Designer.cs">
+      <DependentUpon>frmTeamReg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmUpdTeam.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmUpdTeam.Designer.cs">
+      <DependentUpon>frmUpdTeam.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Team.cs" />
+    <EmbeddedResource Include="frmEnterResult.resx">
+      <DependentUpon>frmEnterResult.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGenerateFixtures.resx">
+      <DependentUpon>frmGenerateFixtures.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGenTeamProfile.resx">
+      <DependentUpon>frmGenTeamProfile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMainMenu.resx">
+      <DependentUpon>frmMainMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRelTeam.resx">
+      <DependentUpon>frmRelTeam.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmScheduleFixtures.resx">
+      <DependentUpon>frmScheduleFixtures.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTeamReg.resx">
+      <DependentUpon>frmTeamReg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmUpdTeam.resx">
+      <DependentUpon>frmUpdTeam.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
